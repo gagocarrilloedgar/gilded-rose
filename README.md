@@ -64,3 +64,35 @@ Para aclarar: un artículo nunca puede tener una `calidad` superior a `50`, sin 
 
 #### Java Solution
 - [CodelyTV Java Solution](https://github.com/CodelyTV/java-gildedrose-kata)
+
+# Conceptso sobre SOLID
+
+Los principios SOLID son una serie de convenciones y prácticas ampliamente aceptadas por la industria del desarrollo de software. **La finalidad de estos principios de diseño de software es conseguir un código más mantenible, robusto, y tolerante a cambios.** Con una alta cohesión en nuestras clases, pero un bajo acoplamiento entre ellas.
+
+
+- 🕺 Principio de Responsabilidad Única:
+    El primero de los principios SOLID: SRP (Single Responsaibility Principle). El RSP no quiere decir que una clase tenga un único método pero si que lo que se expone sea solo uno. De forma interna una clase puede tener más de una función pero las razones por las cuales cambiar deberían depende únicamente de una cosa (vendrá dada por el contexto y por lo que la clase tenga que hacer). De esta forma conseguimos que si hay algo que se tiene que cambiar podemos identificar perfectamente cual de ellas es. **¿Tenemos que aplicar esto siempre?** De libro sería un si, pero para casos simples aplicar abstracciones no necesarias puede añadir complejidad que no necesitamos. Para casos simples, se puede hacer uso del paradigma de la programación funcional que nos ayuda aplciar esto de una forma muy simple y sin tanto boilerplate.
+
+- 🤯 Principio de Abierto/Cerrado:
+    Analizamos el OCP (Open Close Principle). El Software debería estar abierto a extensión y cerrado a modificación. Esto aplica tanto a clases internas,dominio, funciones, servicios,etc. Para evitar esto es tan fácil evitar depender(*importar*) de las implementaciones *Clases o funcionaes directas*  utilizando **types e interfazes**. 
+
+    - *Conclusión*
+        ¿Cuándo usamos Interfaces?: Cuando vayamos a desacoplar entre capas
+        ¿Cuándo usamos Abstract?: En determinados casos para Modelos de dominios
+
+- 🔁 Principio de sustitución de Liskov:
+    Quizás uno de los principios más difíciles de asimilar. La finalidad es asegurarnos que al utilizar heréncia no rompemos **OCP**. Esto se transmite en que el padre debería poder implementar el hijo ya que este es una heréncia de el, por lo que si hacemos un cambio en el constructor del hijo que haga que esto no sea posible estaríamos incumpliendo el principio. Esta ley se utiliza para heréncia y siempre que sea posible mejor utilzizar *composición (Composition over Inheritance)*
+
+- 💥 Principio de segregación de interfaces:
+    El ISP es uno de los principios más fáciles de malinterpretar y pensar que es sencillo. Este principio nos ayuda a hacer que **nuestro clientes (i.e: casos de uso) dependen de interfazes y no de la implementación de estas**. Utilizar este patrón no quire decir unicamente crer todos los método y generar las interfaces utilizando el header de estas, sinó definir las interfazes a través de las necesidades de cliente y después ir bajando hasta llegar a la implementación.
+
+- 🤹‍♀️ Principio de inversión de dependencias:
+    AKA: Santo Grial de la Arquitectura Hexagonal. Este principio nos dice que:
+    módulos de alto nivel no deberían depender de los de bajo nivel. Ambos deberían depender de abstracciones. Esto se puede conseguir **generando abstracciones de nuestros casos de uso, repositorios,etc**. Y estos injectarlos por constructor o parámetro (si estamos en funcional). Utilizarlo nos ayuda a que sabemos que es lo que necesitamos por entrada y que es lo que nos va a dar y utilizando buen naming que es lo que la función hace, sin darnos una implementación específica que nos permite utilizarla en múltiples casos.
+
+
+## Recuros para ampliar la información
+
+- [Principios SOLID | BetaTech](https://www.youtube.com/watch?v=2X50sKeBAcQ)
+- [Errores comunes al diseñar Interfaces - #SOLID - ISP](https://www.youtube.com/watch?v=mDAQLkdNGHU)
+- [Curso SOLID CodelyTVPro](https://pro.codely.tv/library/principios-solid-aplicados-36875/77070/about/)
