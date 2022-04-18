@@ -5,14 +5,11 @@
     "strict": true,
     "noImplicitAny": false,
     "sourceMap": false,
-    "baseUrl": "./",
+    "baseUrl": "",
     "paths": {
-      "@/*": [
-        "app/*"
-      ]
+      "@/*": ["app/*"],
+      "item-no-modified/*": ["app/item-no-modified/*"]
     }
   },
-  "exclude": [
-    "node_modules"
-  ]
+  "exclude": ["node_modules"]
 }

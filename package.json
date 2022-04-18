@@ -1,0 +1,30 @@
+{
+  "name": "gilded-rose",
+  "version": "1.0.0",
+  "description": "Gilded Rose kata solution in different languages",
+  "main": "index.js",
+  "author": "Edgar Gago Carrillo",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gagocarrilloedgar/gilded-rose.git"
+  },
+  "keywords": [
+    "gilded-rose",
+    "kata",
+    "solution",
+    "javascript",
+    "typescript",
+    "node",
+    "refactoring",
+    "refactoring-patterns",
+    "jest"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gagocarrilloedgar/gilded-rose/issues"
+  },
+  "homepage": "https://github.com/gagocarrilloedgar/gilded-rose#readme"
+}
